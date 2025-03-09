@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
 import moe.lobster.moesutopia.data.MoesUtopiaDatagen;
+import moe.lobster.moesutopia.init.ModBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -20,6 +21,7 @@ public class MoesUtopia {
         new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
     public MoesUtopia(IEventBus modEventBus){
+        ModBlocks.register();
 
         MoesUtopiaDatagen.init();
         LOGGER.info("I↓ must↑ be→ the↓ reason↑ why→");

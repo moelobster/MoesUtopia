@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "moesutopia:block/government_table"
+    },
+    "facing=east": {
+      "model": "moesutopia:block/government_table",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "moesutopia:block/government_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "moesutopia:block/government_table",
+      "y": 270
+    }
+  }
+}
