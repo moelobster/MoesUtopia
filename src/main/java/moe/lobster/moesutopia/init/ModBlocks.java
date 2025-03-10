@@ -10,10 +10,12 @@ import static moe.lobster.moesutopia.MoesUtopia.REGISTRATE;
 public class ModBlocks {
     public static final BlockEntry<GovernmentTableBlock> GOVERNMENT_TABLE = REGISTRATE
         .block("government_table", GovernmentTableBlock::new)
-        .properties(properties -> properties.noOcclusion())
+        .properties(properties -> properties
+            .noOcclusion()
+            .strength(5.0F, 1200.0F)
+        )
         .initialProperties(()-> Blocks.CRAFTING_TABLE)
         .blockstate((ctx, provider) -> {
-            provider.modLoc("government_table");
         })
         .simpleItem()
         .tag(BlockTags.MINEABLE_WITH_AXE)
